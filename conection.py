@@ -5,6 +5,7 @@ conectar = sqlite3.connect("tutorial.db")
 #Para percorrermos as tabelas
 marcador = conectar.cursor()
 
+#Tabelas do banco de dados
 marcador.execute("""
 CREATE TABLE tarefas_programacao (
     id INTEGER PRYMARY KEY.
@@ -14,3 +15,13 @@ CREATE TABLE tarefas_programacao (
     resolvidos INTEGER NOT NULL DEFAULT 0,
     );
 """)
+
+marcado.execute(""""
+CREATE TABLE user(
+    id INTEGER PRIMARY KEY;
+    usuario TEXT NOT NULL UNIQUE,
+    email TEXT NOT NULL UNIQUE,
+    aniversário DATE,
+    );
+""")
+
